@@ -1,7 +1,9 @@
 SELECT
+
 	a.ID, 
 	a.UserName, 
 	b.UserName AS ParentUserName
+	
 FROM
 	USER a
 LEFT JOIN
