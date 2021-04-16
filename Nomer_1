@@ -1,0 +1,16 @@
+SELECT
+	a.ID, 
+	a.UserName, 
+	b.UserName AS ParentUserName
+FROM
+	USER a
+LEFT JOIN
+	(
+	SELECT 
+		ID, 
+		UserName 
+	FROM 
+		USER
+	) b
+ON 
+	a.Parent = b.ID
